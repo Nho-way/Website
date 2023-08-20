@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
      * Function to go back to the main page
      *  */
     function goBack() {
-        window.location.href = '../../Intro/index.html';
+        window.location.href = '../../index.html';
     }
 
     // Attach event listener to the "Go Back" button
