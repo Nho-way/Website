@@ -120,7 +120,7 @@ async function init() {
             } else {
                 //let linkElement = document.getElementById('Student Aide');
                 //linkElement.textContent = 'Student Aide';
-                linkElement = document.getElementById('Autonomous Driving');
+                let linkElement = document.getElementById('Autonomous Driving');
                 linkElement.textContent = 'Autonomous Driving';
                 linkElement = document.getElementById('Tarot');
                 linkElement.textContent = 'Tarot Cards';
