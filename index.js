@@ -73,16 +73,22 @@ window.addEventListener('resize', function() {
  * clears local storage of FutureNowState item and creates a new states for future
  */
 async function init() {
-    localStorage.setItem('mode', 1);
+    if (!localStorage.getItem('mode')) {
+        localStorage.setItem('mode', 1);
+    }
+
+    if (!localStorage.getItem('language')) {
+        localStorage.setItem('language', 'English');
+    }
     try {
         console.log(localStorage.getItem('mode'))
         dropdown.addEventListener('change', (event) => {
             const selectedValue = dropdown.value;
             localStorage.setItem('language', selectedValue);
             if (selectedValue == 'Español') {
-                let linkElement = document.getElementById('Student Aide');
-                linkElement.textContent = 'Ayuda Estudiantil';
-                linkElement = document.getElementById('Autonomous Driving');
+                //let linkElement = document.getElementById('Student Aide');
+                //linkElement.textContent = 'Ayuda Estudiantil';
+                let linkElement = document.getElementById('Autonomous Driving');
                 linkElement.textContent = 'Conducción autónoma';
                 linkElement = document.getElementById('Tarot');
                 linkElement.textContent = 'Cartas de Tarot';
@@ -96,9 +102,9 @@ async function init() {
                 }
                 
             } else if (selectedValue == '中文'){
-                let linkElement = document.getElementById('Student Aide');
-                linkElement.textContent = '学生帮助';
-                linkElement = document.getElementById('Autonomous Driving');
+                //let linkElement = document.getElementById('Student Aide');
+                //linkElement.textContent = '学生帮助';
+                let linkElement = document.getElementById('Autonomous Driving');
                 linkElement.textContent = '自动驾驶汽车';
                 linkElement = document.getElementById('Tarot');
                 linkElement.textContent = '塔罗牌';
@@ -112,8 +118,8 @@ async function init() {
                 } 
                 
             } else {
-                let linkElement = document.getElementById('Student Aide');
-                linkElement.textContent = 'Student Aide';
+                //let linkElement = document.getElementById('Student Aide');
+                //linkElement.textContent = 'Student Aide';
                 linkElement = document.getElementById('Autonomous Driving');
                 linkElement.textContent = 'Autonomous Driving';
                 linkElement = document.getElementById('Tarot');
@@ -130,7 +136,8 @@ async function init() {
         });
         
         toggleButton.addEventListener('click', (event) => {
-            if(localStorage.getItem('mode') % 2 == 1){
+            localStorage.setItem('mode', parseInt(localStorage.getItem('mode'))+1)
+            if(localStorage.getItem('mode') % 2 == 0){
                 const indexNavbar = document.querySelector('.index-navbar');
                 document.body.style.backgroundImage = 'url(../Pics/background.jpeg)'
                 indexNavbar.style.backgroundColor = 'white';
@@ -170,11 +177,10 @@ async function init() {
                     });
                 });
             }
-            localStorage.setItem('mode', parseInt(localStorage.getItem('mode'))+1)
+            
             console.log(localStorage.getItem('mode'))
         });
 
-        localStorage.setItem('language', 'English');
     } catch (error) {
         console.error('An error occurred while initializing:', error);
     }

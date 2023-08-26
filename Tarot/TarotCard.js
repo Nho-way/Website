@@ -42,12 +42,13 @@ class TarotCard extends HTMLElement {
      *
      * If the attribute has changed, then we render
      */
+    /*
     attributeChangedCallback(attrName, oldValue, newValue) {
         if (oldValue === newValue) {
             return;
         }
         this.render();
-    }
+    }*/
 
     /**
      * It constructs the HTML structure for the custom element's shadow DOM and sets the
