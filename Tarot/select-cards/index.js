@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', init);
  * shuffled cards in the cardsContainer element.
  */
 async function init() {
+    console.log(localStorage.getItem('mode'))
     if (localStorage.getItem('language') == 'Español') {
         let linkElement = document.getElementById('volume-button');
         linkElement.textContent = 'Volumen APAGADO';

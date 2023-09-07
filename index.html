@@ -20,15 +20,31 @@
     <body class="index-body">
         
         <div class="index-navbar">
-            <label class = "switch">
-                <input type = "checkbox" id ="toggle-button">
-                <span class = "slider round">
-                </span>
-            </label>
+            
+            <div class="dark-mode">
+                
+                <svg class = "sun" xmlns="http://www.w3.org/2000/svg" 
+                        height="2em" 
+                        viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>svg{fill:#ffffff}</style>
+                        <path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+                <svg class = "moon" xmlns="http://www.w3.org/2000/svg" 
+                        height="2em" 
+                        viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>svg{fill:#383838}</style>
+                        <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+               
+                 
+            </div>
+            
             <!--<a id="Blog">COMING SOON: Blog</a>-->
             <!--<a id="Student Aide" href="">Student Aide</a>-->
-            <a id="Tarot" href="../Tarot/select-cards/index.html">Tarot Cards</a>
-            <a id="Autonomous Driving" href="">Autonomous Driving</a>
+            <a id="Tarot" class="nav-button" href="/Tarot/select-cards/index.html">Tarot Cards</a>
+            <a id="Ball" class="nav-button" href="/8ball/8-ball-intro/index.html">8 Ball</a>
+            <a id="Cars" class="nav-button" href="">Autonomous Driving</a>
+            
+            <!--
             <div class="index-menu-button">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +54,7 @@
                 >
                 <path fill = "currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
                 </svg>
-            </div>
+            </div>-->
         </div>
         <!-- <tarot-card></tarot-card> -->
         <div class="intro-container">
@@ -48,6 +64,10 @@
                 <option value="Español">Español</option>
                 <option value="中文">中文</option>
             </select>
+            <!--<button id="languageToggle">Toggle Language</button>-->
+
+            <!-- Add an element to display the selected language -->
+            <!--<div id="selectedLanguage">Language: English</div> -->
             <div class = "button-bar">
                 <div class = "linkedin">
                     <a href="https://www.linkedin.com/in/ho-nicholas-w" target="_blank">
@@ -79,13 +99,15 @@
                     </a>
                 </div>
                 <div class = "resume">
+                    <a>
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         height="45px" 
                         id = "resume"
                         viewBox="0 0 512 512">
                         <path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"/>    
-                    </svg>                
+                    </svg>    
+                </a>            
                 </div>
                 <div id="modal" class="modal">
                     <span class="close">&times;</span>

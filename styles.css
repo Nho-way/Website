@@ -17,23 +17,35 @@ html {
 }
 
 .index-navbar {
-    background-color: #383838;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem;
-    font-size: 15px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+  background-color: #383838;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  font-size: 15px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin-left: auto; 
 }
 
 .index-navbar a {
     color: white;
     text-decoration: underline;
+    padding: 0.5rem;
 }
+
+.nav-button {
+  margin-right: 20px; 
+}
+
+/*
+.index-navbar a:hover {
+  background-color: #191919;
+  transition: background-color 0.5s ease;
+} */
 
 @media (max-width: 768px) {
   .index-navbar > img {
@@ -66,60 +78,19 @@ html {
     align-items: center;
 }
 
-
-.index-menu-button {
-    cursor: pointer;
-    border-radius: 0.5rem;
-    
-    background-color: #383838;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.moon {
+  display: none;
 }
 
-.index-menu-button:hover {
-    background-color: #000000;
-    transition: background-color 0.5s ease;
-}
-
-.index-menu {
-    display: none;
-}
-
-.index-menu > a {
-    text-decoration: none;
-    color: #242424;
-    border-radius: 0.5rem;
-    padding-block: 0.8rem;
-    width: 5rem;
-    text-align: center;
-    background-color: #242424;
-}
-
-.index-menu > a:hover {
-    background-color: #890000;
-    color: #242424;
-    transition: background-color 0.5s ease;
-}
-
-.index-menu-open {
-    display: flex;
-    position: absolute;
-    right: 1rem;
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #242424;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    gap: 1rem;
-    z-index: 1;
-}
-
-.index-menu-button > svg {
-    color: white;
-    width: 70%;
+.dark-mode {
+  cursor: pointer;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #383838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
 }
 
 .button-bar {
@@ -130,12 +101,18 @@ html {
   gap: 40px;  
 }
 
+
+.button-bar a:hover {
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}
+
 .intro-title {
     
     font-size: 100px;
     font-weight: 700;
     margin-bottom: 1rem;
-    margin-top: 23rem;
+    margin-top: 24rem;
     font-family: 'Macondo', Courier, monospace;
     color: rgb(255, 238, 55);
     text-shadow: 0px 0px 30px #f7df1eaa

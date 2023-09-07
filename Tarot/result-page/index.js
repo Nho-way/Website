@@ -1,10 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
+    console.log(localStorage.getItem('mode'))
     if (localStorage.getItem('language') == 'Español') {
         let linkElement = document.getElementById('go-back-button');
         console.log(linkElement);
         linkElement.textContent = 'Regresar';
         linkElement = document.querySelector('h1');
         linkElement.textContent = 'Lectura de Cartas del Tarot';
+    }
+    else if (localStorage.getItem('language') == '中文') {
+        let linkElement = document.getElementById('go-back-button');
+        console.log(linkElement);
+        linkElement.textContent = '返回';
+        linkElement = document.querySelector('h1');
+        linkElement.textContent = '塔罗牌占卜';
     }
     const globalState = JSON.parse(localStorage.getItem('FutureNowState'));
     const selectedCards = globalState.TarotState.selectedCards;
