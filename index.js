@@ -70,8 +70,6 @@ window.addEventListener('resize', function() {
     }
 });
 
-const languageOptions = ['English', 'Español', '中文'];
-let currentLanguageIndex = 0;
 
 /**
  * clears local storage of FutureNowState item and creates a new states for future

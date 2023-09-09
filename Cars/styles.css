@@ -1,0 +1,113 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the full-screen image */
+.full-screen-image {
+    
+    overflow: auto; /* Hide any overflowing image */
+}
+
+.full-screen-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+/* Style the sections */
+.section {
+    display: flex;
+    align-items: center;
+    background-color: #000000; /* Grey background color */
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+.image {
+    flex: 1; /* Occupy half of the section width */
+    padding: 50px; /* Adjust the padding as needed */
+    flex-grow: 1;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*border: 1px solid #ccc; *//* Optional border for the image */
+}
+
+.text {
+    font-family: 'Macondo', Courier, monospace;
+    flex: 1; /* Occupy half of the section width */
+    padding: 40px; /* Adjust the padding as needed */
+    flex-grow: 1;
+    color: white;
+}
+
+h2 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.index-navbar {
+    background-color: #383838;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    font-size: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin-left: auto; 
+  }
+  
+  .index-navbar a {
+      color: white;
+      text-decoration: underline;
+      padding: 0.5rem;
+  }
+
+  .nav-button {
+    margin-right: 20px; 
+  }
+
+  @media (max-width: 768px) {
+    .index-navbar > img {
+        display: none;
+    }
+  }
+  
+  .index-navbar > img {
+    margin-inline: 1.5rem;
+    position: absolute;
+    left: 10px;
+  }
+
+  .moon {
+    display: none;
+  }
+  
+  .dark-mode {
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+  }
+  

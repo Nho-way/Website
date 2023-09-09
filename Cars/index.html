@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../global.css" type="text/css" /> 
+        <link rel="stylesheet" href="styles.css" type="text/css" />
+        <title>Cars</title>
+    </head>
+    <body class = "index-body">
+        <div class="index-navbar">
+            <div class="dark-mode">
+                <svg class = "sun" xmlns="http://www.w3.org/2000/svg" 
+                    height="2em" 
+                    viewBox="0 0 512 512">
+                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <style>svg{fill:#ffffff}</style>
+                    <path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+                <svg class = "moon" xmlns="http://www.w3.org/2000/svg" 
+                    height="2em" 
+                    viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <style>svg{fill:#383838}</style>
+                    <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+            </div>
+            <a id="Back" class="nav-button" href="../index.html">Back</a>
+        </div>
+
+        <div class="full-screen-image">
+            <img src="openpilot.jpeg" alt="Full Screen Image">
+        </div>
+
+        <section class="section">
+            <div class="image">
+                <img src="car.jpg" alt="Section 1 Image">
+            </div>
+            <div class="text">
+                <h2>Comma AI Open Pilot</h2>
+                <p>Open Pilot is an end to end machine learning algorithm for autonomous driving developed by Comma AI. I modified their code to work with my Uncle's Old Car. The car has powered steering and OBD-2 port. By sending our own signal to the powering steering, we are able to change the direction of the car. By connecting to the OBD-2 port, we can interface with the car's internal computer. </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="text">
+                <h2>Custom Trained ML Model: In Progress</h2>
+                <p>To customize and hopefully improve autonomous driving, I'm trying to train a Machine Learning model that maps location of other cars (distance and direction in radians) and location of lanes to the steering wheel position and the pressure applied to the gas and break. Thus, we can try to impersonate how a person might drive. I used corner detection to train a model on what is likely to be a car, and then a clustering model to keep track of lanes. Unfortunately, these methods are not always consistent as corner detection can take a while to process and may incorrectly label something as a car. Additionally, clustering falls apart when the lanes are harder to see. </p>
+            </div>
+            <div class="image">
+                <img src="corner.png" alt="Section 2 Image">
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="image">
+                <img src="Traffic.png" alt="Section 1 Image">
+            </div>
+            <div class="text">
+                <h2>Traffic Light Detection</h2>
+                <p>While I was working on Lane Detection, I realized I could use a clustering algorithm for lights. If I use a relatively narrow angle lens and focus on the largest concentration of red, green, or yellow pixels. If the pixels are green, then you can go. If the pixels are red, then you should not go. Or, if the amount of yellow pixels is greater than 1/4 * your speed squared, then you can run the yellow it. Otherwise, you should not.</p>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="text">
+                <h2>Carla: In Progress</h2>
+                <p>Once, I have a working ML model, I will expand the training data with Carla. </p>
+            </div>
+            <div class="image">
+                <img src="carla.png" alt="Section 2 Image">
+            </div>
+        </section>
+
+    </body>
+    <script type="module" src="index.js"></script>
+
+</html>
+
