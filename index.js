@@ -55,10 +55,8 @@ window.addEventListener('resize', function() {
         if (window.innerWidth <= 780) {
             introTitle.style.fontSize = '2rem';
         }
-        else if (window.innerWidth <= 1000) {
-            introTitle.style.fontSize = '4rem';
-        } else {
-            introTitle.style.fontSize = '80px';
+        else {
+            introTitle.style.fontSize = '100px';
         }
     }
     else {
@@ -202,7 +200,7 @@ function applyLanguageContent(language) {
         if (window.innerWidth <= 780) {
             introTitle.style.fontSize = '2rem';
         } else {
-            introTitle.style.fontSize = '120px';
+            introTitle.style.fontSize = '100px';
         }
         
     } else if (language == '中文'){
