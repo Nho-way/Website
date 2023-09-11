@@ -35,14 +35,25 @@
             </div>
             <div class="text">
                 <h2>Comma AI Open Pilot</h2>
-                <p>Open Pilot is an end to end machine learning algorithm for autonomous driving developed by Comma AI. I modified their code to work with my Uncle's Old Car. The car has powered steering and OBD-2 port. By sending our own signal to the powering steering, we are able to change the direction of the car. By connecting to the OBD-2 port, we can interface with the car's internal computer. </p>
+                <p>Open Pilot is an end to end machine learning algorithm for autonomous driving developed by Comma AI. 
+                    I modified their code to work with my Uncle's Old Car. The car has powered steering and OBD-2 port. 
+                    By sending our own signal to the powering steering, we are able to control the steering of the car. 
+                    By connecting to the OBD-2 port, we can interface with the car's internal computer. </p>
             </div>
         </section>
 
         <section class="section">
             <div class="text">
                 <h2>Custom Trained ML Model: In Progress</h2>
-                <p>To customize and hopefully improve autonomous driving, I'm trying to train a Machine Learning model that maps location of other cars (distance and direction in radians) and location of lanes to the steering wheel position and the pressure applied to the gas and break. Thus, we can try to impersonate how a person might drive. I used corner detection to train a model on what is likely to be a car, and then a clustering model to keep track of lanes. Unfortunately, these methods are not always consistent as corner detection can take a while to process and may incorrectly label something as a car. Additionally, clustering falls apart when the lanes are harder to see. </p>
+                <p>To customize and hopefully improve autonomous driving, I'm trying to train a Machine Learning model 
+                    that maps location of other cars (distance and direction in radians) and location of lanes to the 
+                    steering wheel position and the pressure applied to the gas and break. Thus, we can try to impersonate 
+                    how a person might drive. Rather than using openCV, I attempted to build my algorithm from scratch by
+                    detecting corners in pictures of cars and using those values as training data for a convolutional neural network,
+                    thus training a model on what is likely to be a car. I am also using a clustering model of white pixels to keep 
+                    track of lanes. Unfortunately, these methods are not always consistent as corner detection can take a while to 
+                    process and may incorrectly label something as a car. Additionally, clustering falls apart when the lanes are 
+                    harder to see.  </p>
             </div>
             <div class="image">
                 <img src="corner.png" alt="Section 2 Image">
@@ -55,7 +66,11 @@
             </div>
             <div class="text">
                 <h2>Traffic Light Detection</h2>
-                <p>While I was working on Lane Detection, I realized I could use a clustering algorithm for lights. If I use a relatively narrow angle lens and focus on the largest concentration of red, green, or yellow pixels. If the pixels are green, then you can go. If the pixels are red, then you should not go. Or, if the amount of yellow pixels is greater than 1/4 * your speed squared, then you can run the yellow it. Otherwise, you should not.</p>
+                <p>While I was working on Lane Detection, I realized I could use a clustering algorithm for lights. If I 
+                    use a relatively narrow angle lens and focus on the largest concentration of red, green, or yellow pixels. 
+                    If the pixels are green, then you can go. If the pixels are red, then you should not go. Or, if the amount 
+                    of yellow pixels is greater than 1/4 * your speed squared, then you can run the yellow light. Otherwise, you
+                     should not.</p>
             </div>
         </section>
 
@@ -63,7 +78,7 @@
         <section class="section">
             <div class="text">
                 <h2>Carla: In Progress</h2>
-                <p>Once I have a working ML model, I will expand the training data with Carla. </p>
+                <p>Once I have a working car recognition model, I will expand the training data with Carla. </p>
             </div>
             <div class="image">
                 <img src="carla.png" alt="Section 2 Image">
