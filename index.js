@@ -46,24 +46,16 @@ window.onclick = function(event) {
 window.addEventListener('resize', function() {
     if (this.localStorage.getItem('language') == 'English'){
         if (window.innerWidth <= 780) {
-            introTitle.style.fontSize = '3rem';
+            introTitle.style.fontSize = '4em';
         } else {
-            introTitle.style.fontSize = '100px';
-        }
-    }
-    else if (this.localStorage.getItem('language') == 'Español'){
-        if (window.innerWidth <= 780) {
-            introTitle.style.fontSize = '2rem';
-        }
-        else {
-            introTitle.style.fontSize = '100px';
+            introTitle.style.fontSize = '8em';
         }
     }
     else {
-        if (window.innerWidth <= 950) {
+        if (window.innerWidth <= 780) {
             introTitle.style.fontSize = '2.5rem';
         } else {
-            introTitle.style.fontSize = '80px';
+            introTitle.style.fontSize = '7em';
         }
     }
 });
@@ -124,9 +116,9 @@ async function init() {
 function applyLightModeStyles() {
     const indexNavbar = document.querySelector('.index-navbar');
     document.body.style.backgroundImage = 'url(../Pics/night.jpg)';
-    indexNavbar.style.backgroundColor = '#383838';
+    indexNavbar.style.backgroundColor = 'transparent';
     const menuButton = document.querySelector('.dark-mode');
-    menuButton.style.backgroundColor = '#383838';
+    menuButton.style.backgroundColor = 'transprent';
     const svgElement = document.querySelector('.dark-mode svg');
     svgElement.querySelector('path').setAttribute('fill', 'white');
     const links = indexNavbar.querySelectorAll('a');
@@ -145,9 +137,9 @@ function applyLightModeStyles() {
 function applyDarkModeStyles() {
     const indexNavbar = document.querySelector('.index-navbar');
     document.body.style.backgroundImage = 'url(../Pics/background.jpeg)'
-    indexNavbar.style.backgroundColor = 'white';
+    indexNavbar.style.backgroundColor = 'transparent';
     const menuButton = document.querySelector('.dark-mode');
-    menuButton.style.backgroundColor = 'white';
+    menuButton.style.backgroundColor = 'transparent';
     const svgElement = document.querySelector('.dark-mode svg');
     svgElement.querySelector('path').setAttribute('fill', '#383838');
     const links = indexNavbar.querySelectorAll('a');
@@ -197,11 +189,12 @@ function applyLanguageContent(language) {
         linkElement = document.getElementById('title');
         linkElement.textContent = 'Hola, me llamo Nick!';
         const introTitle = document.querySelector('.intro-title');
+        /*
         if (window.innerWidth <= 780) {
             introTitle.style.fontSize = '2rem';
         } else {
             introTitle.style.fontSize = '100px';
-        }
+        }*/
         
     } else if (language == '中文'){
         let linkElement = document.getElementById('Cars');
@@ -213,11 +206,12 @@ function applyLanguageContent(language) {
         linkElement = document.getElementById('title');
         linkElement.textContent = '你好，我的名字是何微琦!';
         const introTitle = document.querySelector('.intro-title');
+        /*
         if (window.innerWidth <= 780) {
             introTitle.style.fontSize = '2.5rem';
         } else {
             introTitle.style.fontSize = '100px';
-        } 
+        } */
         
     } else {
         let linkElement = document.getElementById('Cars');
@@ -229,11 +223,11 @@ function applyLanguageContent(language) {
         linkElement = document.getElementById('title');
         linkElement.textContent = "Hi, I'm Nick!";
         const introTitle = document.querySelector('.intro-title');
-        if (window.innerWidth <= 780) {
+      /*  if (window.innerWidth <= 780) {
             introTitle.style.fontSize = '3rem';
         } else {
             introTitle.style.fontSize = '140px';
-        }
+        }*/
     }
 
     

@@ -30,14 +30,14 @@ body {
 }
 
 .image {
-    flex: 1; /* Occupy half of the section width */
+    flex:1;
     padding: 50px; /* Adjust the padding as needed */
-    flex-grow: 1;
+    flex-grow:1;
 }
 
 .image img {
+    height:auto;
     width: 100%;
-    height: auto;
     display: block;
     /*border: 1px solid #ccc; *//* Optional border for the image */
 }
@@ -111,3 +111,25 @@ p {
     margin-right: auto;
   }
   
+  @media (max-width: 780px) {
+    /* Reset styles for .section and .image */
+    .section {
+        flex-direction: column; /* Stack the content vertically */
+    }
+    
+    .image {
+        order: 1; /* Change the order to display image below text */
+        padding: 20px 0; /* Adjust padding for the image */
+    }
+    
+    .text {
+        order: 2; /* Change the order to display text above image */
+        padding: 20px; /* Adjust padding for text */
+    }
+}
+
+
+
+
+
+
