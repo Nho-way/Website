@@ -60,22 +60,22 @@ p {
 }
 
 .index-navbar {
-    background-color: #383838;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.8rem;
-    font-size: 15px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    margin-left: auto; 
+    background-color: transparent;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  font-size: 15px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin-left: auto; 
   }
   
   .index-navbar a {
-      color: white;
+      color: transparent;
       text-decoration: underline;
       padding: 0.5rem;
   }

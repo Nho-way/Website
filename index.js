@@ -141,10 +141,10 @@ function applyDarkModeStyles() {
     const menuButton = document.querySelector('.dark-mode');
     menuButton.style.backgroundColor = 'transparent';
     const svgElement = document.querySelector('.dark-mode svg');
-    svgElement.querySelector('path').setAttribute('fill', '#383838');
+    svgElement.querySelector('path').setAttribute('fill', 'transparent');
     const links = indexNavbar.querySelectorAll('a');
     links.forEach(link => {
-        link.style.color = '#383838';
+        link.style.color = 'transparent';
     });
     const svgElements = document.querySelectorAll(".button-bar svg");
     svgElements.forEach(svg => {

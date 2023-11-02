@@ -20,9 +20,9 @@ async function init() {
 
 function applyLightModeStyles() {
     const indexNavbar = document.querySelector('.index-navbar');
-    indexNavbar.style.backgroundColor = '#383838';
+    indexNavbar.style.backgroundColor = 'transparent';
     const menuButton = document.querySelector('.dark-mode');
-    menuButton.style.backgroundColor = '#383838';
+    menuButton.style.backgroundColor = 'transparent';
     const svgElement = document.querySelector('.dark-mode svg');
     svgElement.querySelector('path').setAttribute('fill', 'white');
     const links = indexNavbar.querySelectorAll('a');
@@ -52,9 +52,9 @@ function applyLightModeStyles() {
 
 function applyDarkModeStyles() {
     const indexNavbar = document.querySelector('.index-navbar');
-    indexNavbar.style.backgroundColor = 'white';
+    indexNavbar.style.backgroundColor = 'transparent';
     const menuButton = document.querySelector('.dark-mode');
-    menuButton.style.backgroundColor = 'white';
+    menuButton.style.backgroundColor = 'transparent';
     const svgElement = document.querySelector('.dark-mode svg');
     svgElement.querySelector('path').setAttribute('fill', '#383838');
     const links = indexNavbar.querySelectorAll('a');

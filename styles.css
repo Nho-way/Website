@@ -168,7 +168,7 @@ html {
   cursor: pointer;
   border-radius: 0.5rem;
   color: white;
-  background-color: #383838;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
